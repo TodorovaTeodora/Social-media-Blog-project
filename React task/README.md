@@ -45,8 +45,3 @@ Runs eslint on your project and fixes all auto-fixable problems, while also gene
 
 Runs prettier on your project and formats everything properly.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
