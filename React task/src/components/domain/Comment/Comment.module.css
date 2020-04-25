@@ -1,0 +1,21 @@
+.commentContent {
+    font-size: 14px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: start;
+    margin-top: 10px;
+  }
+  
+  .comment_wrapper {
+    border: 2px solid rgb(196, 191, 191);
+    margin: 10px;
+    max-height: 100px;
+    overflow-y: scroll;
+    display: flex;
+  }
+  
+  .comment_wrapper > UserSummary > img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  

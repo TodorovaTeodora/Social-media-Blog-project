@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .heading {
+    color: #333333;
+    font-size: 3rem;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+  }
+  
+  .image {
+    margin: 0;
+    min-width: 250px;
+    max-width: 500px;
+  }
+  

@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.container > i,
+.container > svg {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: red;
+}
+.container > i:hover,
+.container > svg.hover{
+    color:black;
+    cursor: pointer;
+}
+
+.container label {
+    display: block;
+}
+
+.iconSeparator {
+    position: absolute;
+    right: 32px;
+    top: 8px;
+    height: 16px;
+    width: 1px;
+    background-color: rgb(236, 146, 146);
+}
+
+.input{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing:border-box;
+}
+.iconInput{
+    padding: 6px 34px 6px 12px;
+}
+form input[type='text'] {
+width: 100%;
+}

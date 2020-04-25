@@ -1,0 +1,110 @@
+.wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  margin: 0;
+  padding: 0 1rem;
+  background: rgb(243, 160, 160);
+  border-radius: 10px;
+  border-top: 5px solid #e06df7;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.content {
+  margin: 0;
+  padding: 0 0 1rem 0;
+  flex: 1 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  margin: 0;
+  padding: 1rem 0;
+  flex-shrink: 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.namesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  margin: 0 0 0 1rem;
+  color: #333333;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.username {
+  margin: 0 0 0 1rem;
+  color: #666666;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.bio {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.subtitle {
+  font-weight: normal;
+  color: #666666;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.footerBlock:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.followContainer {
+  display: block;
+  float: left;
+}
+
+.follow {
+  margin: 0;
+  font-weight: medium;
+  text-align: center;
+}
+
+.followingContainer {
+  display: block;
+  float: inline-end;
+}
+
+.following {
+  margin: 0;
+  font-weight: medium;
+  text-align: center;
+}
