@@ -4,7 +4,7 @@ export type UserBioModel = {
   id: number;
   caption: string;
   content: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   country: string;
   city: string;
 } & TimestampsModel;

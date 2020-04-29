@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import classes from './Button.module.css';
+import React from 'react';
+import styles from './Button.module.css';
 
-class Button extends Component {
-  render() {
-    return (
-      <div>
-        <button type="submit" className={classes.button}>
-          {this.props.children}
-        </button>
-      </div>
-    );
-  }
+type Props = {
+  children: React.ReactNode;
+};
+
+function Button({ children }: Props) {
+  return (
+    <button type="button" className={styles.Button}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
-

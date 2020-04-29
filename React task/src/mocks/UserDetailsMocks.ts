@@ -1,7 +1,6 @@
 import * as Faker from 'faker';
 import { UserDetailsModel } from 'types/models';
-import { createUserBIO } from './createUserBio';
-import { createMediaModel } from './MediaMocks';
+import { createUserBio } from './UserBioMocks';
 
 export const createUserDetails = (): UserDetailsModel => {
   const bio: UserDetailsModel = {
@@ -10,8 +9,8 @@ export const createUserDetails = (): UserDetailsModel => {
     followingCount: Faker.random.number(),
     name: `${Faker.name.firstName()} ${Faker.name.lastName()}`,
     username: Faker.internet.userName(),
-    avatar: createMediaModel(),
-    userBio: createUserBIO(),
+    avatarId: Faker.random.number(),
+    userBio: createUserBio(),
   };
   return bio;
 };

@@ -1,0 +1,13 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  padding: 1em 3em 0 1em;
+  background: #dad9da;
+  justify-content: space-between;
+  position: fixed;
+  width: 95vw;
+}
+
+.Header > div {
+  height: 35px;
+}

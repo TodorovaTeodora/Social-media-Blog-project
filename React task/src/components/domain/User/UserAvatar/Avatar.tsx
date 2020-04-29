@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import { MediaModel } from 'types';
+import React from 'react';
 import styles from './Avatar.module.css';
+import placeholder from './avatar-placeholder.png';
 
-type AvatarProp = {
-  avatar: MediaModel;
+type AvatarProps = {
+  avatarId: number;
 };
 
-class Avatar extends Component<AvatarProp> {
-  render() {
-    const { avatar } = this.props;
+const { REACT_APP_API_URL } = process.env;
 
-    return (
-      <div className={styles.avatar_wrapper}>
-        <img src={avatar.filePath} alt="" className={styles.avatar} />
-      </div>
-    );
-  }
+function Avatar({ avatarId }: AvatarProps) {
+  return (
+    <img
+      src={avatarId ? `${REACT_APP_API_URL}/media/${avatarId}` : placeholder}
+      alt="Avatar"
+      className={styles.avatar}
+    />
+  );
 }
 
 export default Avatar;

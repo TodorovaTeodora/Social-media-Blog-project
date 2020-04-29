@@ -1,0 +1,43 @@
+.main_wrapper {
+  margin-left: 150px;
+  display: flex;
+}
+
+.subscribe {
+  display: flex;
+}
+
+.social {
+  width: 100%;
+  padding: 50px 0 0 150px;
+}
+
+.present {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.present > * {
+  text-decoration: none;
+  color: rgb(0, 68, 255);
+  font-size: 26px;
+}
+
+.subscribe_component {
+  padding: 10px 55px 0 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.button_follow {
+  color: rgb(0, 68, 255);
+  border-radius: 5px;
+  margin-right: 35px;
+}
+
+.button_unfollow {
+  color: rgb(255, 8, 0);
+  border-radius: 5px;
+}

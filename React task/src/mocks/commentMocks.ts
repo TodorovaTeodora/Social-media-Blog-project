@@ -1,17 +1,21 @@
+import { CommentModel } from 'types';
+import * as Faker from 'faker';
+import { createUserSummary } from './UserSummaryMocks';
 
-import { makeid } from 'utils';
-import { CommentModel } from 'types/models/Comment';
-import { createUserSummary } from './createUserSummary';
-
-
-export const createComments = (numberOfComments: number) => {
+export const createComments = (numOfComments: number): Array<CommentModel> => {
   const comments: CommentModel[] = [];
 
-  for (let i = 1; i <= numberOfComments; i++) {
+  for (let i = 1; i <= numOfComments; i++) {
     comments.push({
-      id: 1,
-      content: makeid(10),
-      user: createUserSummary(1),
+      id: Faker.random.number(),
+      content: Faker.lorem.sentences(),
+      user: createUserSummary(),
+      commentsCount: Faker.random.number(),
+      disliked: true,
+      dislikesCount: Faker.random.number(),
+      liked: true,
+      likesCount: Faker.random.number(),
+      mediaId: Faker.random.number(),
     });
   }
 

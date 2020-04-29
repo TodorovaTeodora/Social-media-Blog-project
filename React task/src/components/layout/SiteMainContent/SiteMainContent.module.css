@@ -1,0 +1,5 @@
+.SiteMainContent {
+  display: flex;
+  background-color: rgba(117, 218, 243, 0.397);
+  padding-right: 2em;
+}

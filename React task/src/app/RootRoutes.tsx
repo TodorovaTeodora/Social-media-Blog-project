@@ -1,41 +1,31 @@
-import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router';
-import { NewsFeed, ProfileDetails, SignIn, SignUp } from 'pages';
-import NotFound from 'pages/NotFound';
-import { AuthContext } from 'context/AuthContext';
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router';
+import { AuthContext } from 'contexts/AuthContext';
+import { ProfileDetails, NewsFeed, SignUp, SignIn } from '../pages';
 
-
-class RootRoutes extends Component {
-  render() {
-    return (
-      <Switch>
-      <AuthContext.Consumer>
-        {({ user }) =>
-          user ? (
-            <>
-              <Route exact path="/" component={NewsFeed} />
-              <Route
-                exact
-                path="/users"
-                component={ProfileDetails}
-              />
-              <Redirect path="/signup" to="/" />
-            </>
-          ) : (
-            <>
-              <Route exact path="/signup" component={SignUp} />
-              <Route exact path="/login" component={SignIn} />
-              <Redirect to="/login" />
-            </>
-          )}
-      </AuthContext.Consumer>
-
-      <Route path="/" component={NotFound} />
-    </Switch>
+function RootRouts() {
+  return (
+    <AuthContext.Consumer>
+      {({ user }) =>
+        user ? (
+          <Switch>
+            <Route exact path="/feed" component={NewsFeed} />
+            <Route exact path="/user" component={ProfileDetails} />
+            <Route exact path="/users/:username" component={ProfileDetails} />
+            <Redirect path="/signin" to="/" />
+            <Redirect path="/signup" to="/" />
+            <Redirect exact path="/" to="/feed" />
+          </Switch>
+        ) : (
+          <Switch>
+            <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/signup" component={SignUp} />
+            <Redirect path="/" to="/signin" />
+          </Switch>
+        )
+      }
+    </AuthContext.Consumer>
   );
 }
-}
 
-
-
-export default RootRoutes;
+export default RootRouts;

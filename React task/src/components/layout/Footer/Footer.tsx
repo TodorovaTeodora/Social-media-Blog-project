@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import classes from './Footer.module.css';
+import React from 'react';
+import styles from './Footer.module.css';
 
-class Footer extends Component {
-  render() {
-    return <footer className={classes.footer}>{this.props.children}</footer>;
-    
-  }
+function Footer() {
+  return (
+    <footer className={styles.Footer} />
+  );
 }
+
 export default Footer;

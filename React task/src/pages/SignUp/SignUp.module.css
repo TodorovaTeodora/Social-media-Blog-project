@@ -1,0 +1,29 @@
+.sign_up {
+  background-color: whitesmoke;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.button_wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.button {
+  margin-right: 350px;
+  margin-top: 40px;
+  padding: 5px;
+  margin-left: auto;
+}

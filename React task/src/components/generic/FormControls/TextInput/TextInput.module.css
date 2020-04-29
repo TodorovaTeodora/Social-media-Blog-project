@@ -1,0 +1,72 @@
+@import '../../../shared.css';
+
+.container {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.container > i,
+.container > svg {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  color: #495057;
+}
+
+.container > i:hover,
+.container > svg:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.container label {
+  display: block;
+}
+
+.iconSeperator {
+  position: absolute;
+  right: 32px;
+  top: 8px;
+  height: 16px;
+  width: 1px;
+  background-color: rgb(221, 221, 221);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  appearance: none;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  background: transparent;
+  font-size: 1rem;
+  transition: border 0.25s ease;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* .iconInput {
+  padding: 6px 34px 6px 12px;
+} */
+
+form input[type='text'] {
+  width: 100%;
+}
+
+form .container:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  margin-bottom: 8px;
+}
+
+.error {
+  color: red;
+}

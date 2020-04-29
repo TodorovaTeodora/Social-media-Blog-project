@@ -1,9 +1,19 @@
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(12, 10, 10);
-    color: white;
-    text-align: center;
-  }
+.Footer {
+  background-color: rgba(226, 222, 223, 0.486);
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Link {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: rgba(128, 128, 128, 0.26);
+  padding: 0.3em;
+  width: 15em;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin: 0.1em;
+}

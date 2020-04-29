@@ -1,29 +1,44 @@
-import React, { Component } from 'react';
-// eslint-disable-next-line import/no-duplicates
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-// eslint-disable-next-line import/no-duplicates
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classes from './TextInput.module.css';
+import React from 'react';
+import styles from './TextInput.module.css';
 
-type Props = React.ComponentProps<'input'> & {
-  icon?: IconDefinition;
+export type TextInputProps = React.ComponentProps<'input'> & {
+  label?: String;
+  content?: string;
+  name?: string;
+  errorMessage?: string;
+  isTouched?: boolean;
+  value?: string;
 };
-class TextInput extends Component<Props> {
-  render() {
-    const { icon, ...rest } = this.props;
-    return (
-      <div className={classes.container}>
-        {icon && (
+
+function TextInput({
+  label,
+  content,
+  name,
+  errorMessage,
+  isTouched,
+  ...rest
+}: TextInputProps) {
+  return (
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        {label && (
           <>
-            <div className={classes.iconSeparator} />
-            <FontAwesomeIcon icon={icon} />
+            <p>{label}</p>
           </>
         )}
-        <input type='text' className={classes.input} {...rest} />
+        <input
+          type="text"
+          placeholder={content}
+          name={name}
+          className={styles.input}
+          {...rest}
+        />
+        {isTouched && errorMessage && (
+          <div className={styles.errorMessage}>{errorMessage}</div>
+        )}
       </div>
-    ); 
-                
-
-  }
+    </div>
+  );
 }
+
 export default TextInput;
